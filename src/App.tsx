@@ -37,7 +37,7 @@ const App = () => {
     <AppBar position="static">
       <Toolbar>
         <Typography variant="h6" component="div" >
-          🚀 SpaceX App
+          <span tabIndex={0}>🚀 SpaceX App</span>
         </Typography>
       </Toolbar>
     </AppBar>
