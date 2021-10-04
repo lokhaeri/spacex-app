@@ -8,7 +8,7 @@ import { DataTable } from './component/DataTable';
 const App = () => {
   const [data, setData] = useState<LaunchDataEntryProps[] | []>([]);
   const [loading, setLoading] = useState(true);
-  const [apiError, setApiError] = useState<any | unknown>();
+  const [apiError, setApiError] = useState<string | unknown>();
   
   useEffect(() => {
     setLoading(true);
