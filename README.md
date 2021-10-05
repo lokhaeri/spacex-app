@@ -12,7 +12,9 @@ User is able to search by launch name.
 
 ## App Setup
   - React (create react app) and TypeScript.
+  - Redux for app state.
   - Unit tests using Jest and React Testing Library.
+  - MSW for mocking dev and unit tests.
   - Used Material-UI for UI components.
   - Used ag-grid as the data table.
 
