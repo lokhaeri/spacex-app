@@ -9,6 +9,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { StyledEngineProvider } from '@mui/material/styles';
 
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import reducer from './store/reducer';
+
+
+const store = createStore(
+  reducer
+);
+
 // Starts mock server using msw
 if(process.env.REACT_APP_ENV === 'mock') {
   const { worker } = require('./mocks/browser');
@@ -18,7 +27,9 @@ if(process.env.REACT_APP_ENV === 'mock') {
 ReactDOM.render(
   <React.StrictMode>
     <StyledEngineProvider injectFirst>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </StyledEngineProvider>
   </React.StrictMode>,
   document.getElementById('root')
